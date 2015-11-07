@@ -18,4 +18,4 @@ fi
 
 cd /opt/sarah
 export NODE_PATH=/opt/sarah/server/app/node_modules
-sudo -E node /opt/sarah/server/app/app.js
+nodejs /opt/sarah/server/app/app.js
