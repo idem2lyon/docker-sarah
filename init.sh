@@ -12,6 +12,7 @@ if [ ! -d /opt/sarah/server ]; then
 	git clone https://github.com/JpEncausse/SARAH-Server-NodeJS.git sarah
 	cd /opt/sarah/server/app
 	npm install
+	npm install request
 	mkdir data
 	cp server/server.prop data/custom.prop
 fi
@@ -19,3 +20,5 @@ fi
 cd /opt/sarah
 export NODE_PATH=/opt/sarah/server/app/node_modules
 nodejs /opt/sarah/server/app/app.js
+
+/usr/bin/supervisord
