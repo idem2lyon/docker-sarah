@@ -7,7 +7,6 @@ if [ -z ${ROOT_PASSWORD} ]; then
 else
 	echo "root:${ROOT_PASSWORD}" | chpasswd
 fi
-
 cd /opt/sarah
 export NODE_PATH=$PWD/server/app/node_modules
 sudo -E node server/app/app.js
