@@ -35,14 +35,6 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 ####################################################################SARAH#######################################################################################
 
-
-WORKDIR /opt
-RUN git clone https://github.com/JpEncausse/SARAH-Server-NodeJS.git sarah
-WORKDIR /opt/sarah/server/app
-RUN npm install
-RUN mkdir data
-RUN cp server/server.prop data/custom.prop
-
 ADD bashrc /root/.bashrc
 ADD init.sh /root/init.sh
 RUN chmod +x /root/init.sh
