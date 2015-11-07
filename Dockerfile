@@ -38,7 +38,7 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 WORKDIR /opt
 RUN git clone https://github.com/JpEncausse/SARAH-Server-NodeJS.git sarah
-WORKDIR /opt/sarah
+WORKDIR /opt/sarah/server/app
 RUN npm install
 RUN mkdir data
 RUN cp server/server.prop data/custom.prop
