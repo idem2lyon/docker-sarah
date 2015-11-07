@@ -7,7 +7,7 @@ if [ -z ${ROOT_PASSWORD} ]; then
 else
 	echo "root:${ROOT_PASSWORD}" | chpasswd
 fi
-if [ !-d /opt/sarah/server ]; then
+if [ ! -d /opt/sarah/server ]; then
 	cd /opt
 	git clone https://github.com/JpEncausse/SARAH-Server-NodeJS.git sarah
 	cd /opt/sarah/server/app
